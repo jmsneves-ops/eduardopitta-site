@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eduardo Pitta — Poeta, escritor e ensaísta português. 1949–2023.">
+  <meta name="keywords" content="Eduardo Pitta, poeta, escritor, ensaísta, literatura portuguesa">
+  <meta property="og:title" content="Eduardo Pitta">
+  <meta property="og:description" content="Poeta, escritor e ensaísta português. Nasceu em Lourenço Marques, actual Maputo, a 9 de Agosto de 1949; morreu a 25 de Julho de 2023.">
+  <meta property="og:image" content="https://eduardopitta.pt/images/2021/05/16/ed.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eduardopitta.pt">
+  <title>Eduardo Pitta</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ====================================================
+     NAVEGAÇÃO
+     ==================================================== -->
+<nav class="site-nav" role="navigation" aria-label="Navegação principal">
+  <a class="site-logo" href="#" onclick="showPage('entrada'); return false;"><img src="images/logo.png" alt="Eduardo Pitta" style="height:28px;filter:brightness(0) invert(0);vertical-align:middle;"></a>
+
+  <!-- Desktop -->
+  <ul class="nav-links" id="nav-desktop">
+    <li><a href="#" onclick="showPage('entrada'); return false;" id="nl-entrada" class="active" data-pt="Entrada" data-en="Home">Entrada</a></li>
+    <li><a href="#" onclick="showPage('obra'); return false;" id="nl-obra" data-pt="Obra" data-en="Works">Obra</a></li>
+    <li><a href="#" onclick="showPage('critica'); return false;" id="nl-critica" data-pt="Crítica" data-en="Criticism">Crítica</a></li>
+    <li><a href="#" onclick="showPage('memorial'); return false;" id="nl-memorial" data-pt="Memorial" data-en="Memorial">Memorial</a></li>
+    <li><a href="#" onclick="showPage('arquivo'); return false;" id="nl-arquivo" data-pt="Arquivo" data-en="Archive">Arquivo</a></li>
+    <li><button class="lang-toggle" onclick="toggleLang()" id="lang-btn" aria-label="Mudar língua">PT · EN</button></li>
+  </ul>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Menu mobile">
+  <a href="#" onclick="showPage('entrada'); closeMenu(); return false;" id="dm-entrada" class="active" data-pt="Entrada" data-en="Home">Entrada</a>
+  <a href="#" onclick="showPage('obra'); closeMenu(); return false;" id="dm-obra" data-pt="Obra" data-en="Works">Obra</a>
+  <a href="#" onclick="showPage('critica'); closeMenu(); return false;" id="dm-critica" data-pt="Crítica" data-en="Criticism">Crítica</a>
+  <a href="#" onclick="showPage('memorial'); closeMenu(); return false;" id="dm-memorial" data-pt="Memorial" data-en="Memorial">Memorial</a>
+  <a href="#" onclick="showPage('arquivo'); closeMenu(); return false;" id="dm-arquivo" data-pt="Arquivo" data-en="Archive">Arquivo</a>
+  <button class="lang-toggle" onclick="toggleLang()" id="lang-btn-mobile" aria-label="Mudar língua">PT · EN</button>
+</div>
+
+
+<!-- ====================================================
+     ENTRADA
+     ==================================================== -->
+<main id="page-entrada" class="page active" lang="pt">
+
+  <div class="hero">
+    <div class="hero-text">
+      <p class="hero-poem" id="hero-poem">
+        A vida é uma ferida?<br>
+        O coração lateja?<br>
+        O sangue é uma parede cega?<br>
+        E se tudo, de repente?
+      </p>
+      <p class="hero-translator" id="hero-translator">Eduardo Pitta. Translated by Ana Luísa Amaral</p>
+      <img
+        src="images/signature.png"
+        class="hero-signature"
+        alt="Assinatura de Eduardo Pitta"
+        onerror="this.src='https://eduardopitta.com/images/signature.png'"
+      >
+      <p class="hero-bio-short" id="hero-bio-short">
+        Poeta, escritor e ensaísta português. Nasceu em Lourenço Marques, actual Maputo, a 9 de Agosto de 1949; morreu a 25 de Julho de 2023.
+      </p>
+      <div class="hero-icons">
+        <a href="https://www.facebook.com/eduardogamapitta" class="hero-icon" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">f</a>
+        <a href="http://daliteratura.blogspot.com/" class="hero-icon" target="_blank" rel="noopener" aria-label="Blogue Da Literatura" title="Da Literatura">✦</a>
+        <a href="https://pt.wikipedia.org/wiki/Eduardo_Pitta" class="hero-icon" target="_blank" rel="noopener" aria-label="Wikipedia" title="Wikipedia">W</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img
+        src="images/ed02.jpg"
+        alt="Eduardo Pitta © Enric Vives-Rubio"
+        onerror="this.src='https://eduardopitta.com/images/2021/04/30/ed02.jpg'"
+      >
+    </div>
+  </div>
+
+  <!-- Biografia PT -->
+  <div class="bio-full" id="bio-pt" lang="pt">
+    <p><strong>Eduardo Pitta</strong> é um poeta, escritor e ensaísta português. Nasceu em Lourenço Marques, actual Maputo, a 9 de Agosto de 1949. Viveu em Moçambique até Novembro de 1975. Desde 2011 é crítico literário da revista <em>Sábado</em>. Escreve e publica desde 1967. Entre 1974 e 2021 publicou dez livros de poesia, um romance, duas colectâneas de contos, quatro volumes de ensaio, duas recolhas de crónicas, dois diários de viagem e, em 2013, o livro de memórias <em>Um Rapaz a Arder</em>.</p>
+    <p>Um ensaio sobre homossexualidade na literatura portuguesa contemporânea, <em>Fractura</em> (2003), é considerado por Mark Sabine «the first history of Portuguese literary homosexuality». Participou em encontros de escritores, congressos, seminários e festivais de poesia em Portugal, Espanha, França, Itália, Grécia e Colômbia. Poemas seus encontram-se traduzidos em castelhano, italiano, francês, inglês e hebraico. Traduzido por Alison Aiken, o conto <em>Kalahari</em> foi publicado em 2005 na revista inglesa <em>Chroma</em>.</p>
+    <p>Eduardo Pitta colaborou e colabora em publicações literárias de vária índole, de Portugal, Brasil, Espanha, França e Estados Unidos. Em 2008 adaptou para crianças <em>O Crime do Padre Amaro</em>, clássico de Eça de Queirós. Dirige a edição das obras completas de António Botto. Entre Abril de 2008 e Janeiro de 2014 assinou na revista <em>LER</em> a coluna <em>Heterodoxias</em>. Fez crítica literária nas revistas <em>Colóquio-Letras</em> (1987–2019), da Fundação Calouste Gulbenkian, e <em>LER</em> (1990–2006), bem como nos jornais <em>Diário de Notícias</em> (1996–1998) e <em>Público</em> (2004–2011).</p>
+    <p>A seu respeito tem-se falado de visão pulsional e agreste da existência, ritmo acelerado, timbre neo-expressionista, <em>pathos</em> autobiográfico, triunfo do recalcado, narrador centrado na identidade sexual do sujeito e, <em>last but not least</em>, hermenêutica gay. Mantém desde 2005 o blogue <a href="http://daliteratura.blogspot.com/" target="_blank" rel="noopener"><em>Da Literatura</em></a>. Casou em 2010 com Jorge Neves, seu companheiro desde 1972.</p>
+  </div>
+
+  <!-- Biografia EN -->
+  <div class="bio-full" id="bio-en" lang="en" style="display:none">
+    <p><strong>Eduardo Pitta</strong> was a Portuguese poet, fiction writer and essayist. He was born in Lourenço Marques, present-day Maputo, on August 9, 1949. He lived in Mozambique until November 1975. From 2011 he was the literary critic of <em>Sábado</em> magazine. He published from 1967. Between 1974 and 2021 he published ten books of poetry, a novel, two collections of short stories, four volumes of essays, two collections of chronicles, two travel diaries and, in 2013, the memoir <em>Um Rapaz a Arder</em>.</p>
+    <p>An essay on homosexuality in contemporary Portuguese literature, <em>Fractura</em> (2003), is considered by Mark Sabine to be «the first history of Portuguese literary homosexuality». He participated in writers' meetings, congresses, seminars and poetry festivals in Portugal, Spain, France, Italy, Greece and Colombia. His poems have been translated into Spanish, Italian, French, English and Hebrew. Translated by Alison Aiken, the short story <em>Kalahari</em> was published in 2005 in the English journal <em>Chroma</em>.</p>
+    <p>Eduardo Pitta contributed to literary publications in Portugal, Brazil, Spain, France and the United States. In 2008 he adapted Eça de Queirós's classic <em>O Crime do Padre Amaro</em> for children. He directed the edition of the complete works of António Botto. He wrote literary criticism for <em>Colóquio-Letras</em> (1987–2019), published by the Calouste Gulbenkian Foundation, and <em>LER</em> (1990–2006), as well as for the newspapers <em>Diário de Notícias</em> (1996–1998) and <em>Público</em> (2004–2011).</p>
+    <p>He married Jorge Neves in 2010, his companion since 1972.</p>
+  </div>
+
+</main>
+
+
+<!-- ====================================================
+     OBRA
+     ==================================================== -->
+<main id="page-obra" class="page" lang="pt">
+  <div class="section">
+    <h1 class="section-title" id="obra-title">Obra</h1>
+
+    <h2 class="category-label">Poesia</h2>
+    <ul class="book-list">
+      <li><span><em>Sílaba a Sílaba</em></span><span class="book-year">1974</span></li>
+      <li><span><em>Um Cão de Angústia Progride</em></span><span class="book-year">1979</span></li>
+      <li><span><em>A Linguagem da Desordem</em></span><span class="book-year">1983</span></li>
+      <li><span><em>Olhos Calcinados</em></span><span class="book-year">1984</span></li>
+      <li><span><em>Archote Glaciar</em></span><span class="book-year">1988</span></li>
+      <li><span><em>Arbítrio</em></span><span class="book-year">1991</span></li>
+      <li><span><em>Marcas de Água</em></span><span class="book-year">1999</span></li>
+      <li><span><em>Poesia Escolhida</em></span><span class="book-year">2004</span></li>
+      <li><span><em>Y Si Todo, de Repente?</em></span><span class="book-year">2011</span></li>
+      <li><span><em>Desobediência</em></span><span class="book-year">2011</span></li>
+    </ul>
+
+    <h2 class="category-label" id="cat-ficcao">Ficção</h2>
+    <ul class="book-list">
+      <li><span><em>Persona</em></span><span class="book-year">2000 · 3.ª ed. 2019</span></li>
+      <li><span><em>Cidade Proibida</em></span><span class="book-year">2007 · 4.ª ed. 2013</span></li>
+      <li><span><em>Devastação</em></span><span class="book-year">2021</span></li>
+    </ul>
+
+    <h2 class="category-label" id="cat-ensaio">Ensaio &amp; Crítica</h2>
+    <ul class="book-list">
+      <li><span><em>Comenda de Fogo</em></span><span class="book-year">2002</span></li>
+      <li><span><em>Fractura</em></span><span class="book-year">2003</span></li>
+      <li><span><em>Metal Fundente</em></span><span class="book-year">2004</span></li>
+      <li><span><em>Aula de Poesia</em></span><span class="book-year">2010</span></li>
+    </ul>
+
+    <h2 class="category-label" id="cat-cronica">Crónica</h2>
+    <ul class="book-list">
+      <li><span><em>Intriga em Família</em></span><span class="book-year">2007</span></li>
+      <li><span><em>Pompas Fúnebres</em></span><span class="book-year">2014</span></li>
+    </ul>
+
+    <h2 class="category-label" id="cat-diario">Diário &amp; Memórias</h2>
+    <ul class="book-list">
+      <li><span><em>Os Dias de Veneza</em></span><span class="book-year">2005</span></li>
+      <li><span><em>Um Rapaz a Arder</em></span><span class="book-year">2013</span></li>
+      <li><span><em>Cadernos Italianos</em></span><span class="book-year">2013</span></li>
+    </ul>
+  </div>
+</main>
+
+
+<!-- ====================================================
+     CRÍTICA
+     ==================================================== -->
+<main id="page-critica" class="page" lang="pt">
+  <div class="critica-list">
+    <h1 class="section-title" id="critica-title">Crítica</h1>
+
+    <div class="critica-item">
+      <p class="critica-pub">Revista Sábado</p>
+      <p class="critica-period">2011 – 2023</p>
+      <p class="critica-desc" id="cd1">Crítica literária semanal</p>
+    </div>
+    <div class="critica-item">
+      <p class="critica-pub">Colóquio-Letras</p>
+      <p class="critica-period">1987 – 2019 · Fundação Calouste Gulbenkian</p>
+      <p class="critica-desc" id="cd2">Colaboração regular em crítica e ensaio literário</p>
+    </div>
+    <div class="critica-item">
+      <p class="critica-pub">Revista LER</p>
+      <p class="critica-period">1990 – 2006 · Coluna <em>Heterodoxias</em> 2008 – 2014</p>
+      <p class="critica-desc" id="cd3">Crítica literária e ensaio</p>
+    </div>
+    <div class="critica-item">
+      <p class="critica-pub">Público</p>
+      <p class="critica-period">2004 – 2011</p>
+      <p class="critica-desc" id="cd4">Crítica literária</p>
+    </div>
+    <div class="critica-item">
+      <p class="critica-pub">Diário de Notícias</p>
+      <p class="critica-period">1996 – 1998</p>
+      <p class="critica-desc" id="cd5">Crítica literária</p>
+    </div>
+    <div class="critica-item">
+      <p class="critica-pub">Da Literatura</p>
+      <p class="critica-period">2005 – 2023 · <a href="http://daliteratura.blogspot.com/" target="_blank" rel="noopener">daliteratura.blogspot.com</a></p>
+      <p class="critica-desc" id="cd6">Blogue de crítica e ensaio literário, mantido durante quase duas décadas</p>
+    </div>
+  </div>
+</main>
+
+
+<!-- ====================================================
+     MEMORIAL
+     ==================================================== -->
+<main id="page-memorial" class="page" lang="pt">
+  <div class="memorial-header">
+    <h1>Eduardo Pitta</h1>
+    <p class="memorial-dates" id="memorial-dates">9 de Agosto de 1949 &nbsp;·&nbsp; 25 de Julho de 2023</p>
+  </div>
+  <div class="memorial-body">
+    <div class="memorial-block">
+      Fotografia e texto de abertura
+    </div>
+    <div class="memorial-block">
+      Textos e homenagens
+      <small>A migrar do memorial de Facebook · testemunhos de amigos, escritores e leitores</small>
+    </div>
+    <div class="memorial-block">
+      Galeria fotográfica
+    </div>
+    <div class="memorial-block">
+      Poemas escolhidos por Jorge Neves
+    </div>
+  </div>
+</main>
+
+
+<!-- ====================================================
+     ARQUIVO
+     ==================================================== -->
+<main id="page-arquivo" class="page" lang="pt">
+  <div class="section" style="padding-bottom:0">
+    <h1 class="section-title" style="margin-bottom:0" id="arquivo-title">Arquivo</h1>
+  </div>
+
+  <div class="arquivo-tabs" role="tablist">
+    <button class="arquivo-tab active" role="tab" aria-selected="true" onclick="showTab('entrevistas')" id="tab-entrevistas" data-pt="Entrevistas" data-en="Interviews">Entrevistas</button>
+    <button class="arquivo-tab" role="tab" aria-selected="false" onclick="showTab('imprensa')" id="tab-imprensa" data-pt="Imprensa" data-en="Press">Imprensa</button>
+    <button class="arquivo-tab" role="tab" aria-selected="false" onclick="showTab('publicacoes')" id="tab-publicacoes" data-pt="Publicações Dispersas" data-en="Scattered Publications">Publicações Dispersas</button>
+  </div>
+
+  <div class="arquivo-panel active" id="panel-entrevistas" role="tabpanel">
+    <div class="arquivo-item">
+      <p class="arquivo-item-title"><em>Espaço reservado para entrevistas</em></p>
+      <p class="arquivo-item-meta">Imprensa escrita · Rádio · Televisão · YouTube</p>
+    </div>
+    <div class="arquivo-placeholder">Conteúdo a adicionar</div>
+  </div>
+
+  <div class="arquivo-panel" id="panel-imprensa" role="tabpanel">
+    <div class="arquivo-item">
+      <p class="arquivo-item-title"><em>Espaço reservado para recortes de imprensa</em></p>
+      <p class="arquivo-item-meta">Críticas, recensões, artigos sobre a obra</p>
+    </div>
+    <div class="arquivo-placeholder">Conteúdo a adicionar</div>
+  </div>
+
+  <div class="arquivo-panel" id="panel-publicacoes" role="tabpanel">
+    <div class="arquivo-item">
+      <p class="arquivo-item-title"><em>Espaço reservado para publicações dispersas</em></p>
+      <p class="arquivo-item-meta">Colaborações em antologias, revistas e publicações periódicas</p>
+    </div>
+    <div class="arquivo-placeholder">Conteúdo a adicionar</div>
+  </div>
+</main>
+
+
+<!-- ====================================================
+     RODAPÉ
+     ==================================================== -->
+<footer class="site-footer">
+  <span id="footer-text">Eduardo Pitta &nbsp;©&nbsp; 1967 – 2023</span>
+</footer>
+
+
+<!-- ====================================================
+     JAVASCRIPT
+     ==================================================== -->
+<script>
+  /* ---- Estado ---- */
+  var currentLang = 'pt';
+  var pages = ['entrada', 'obra', 'critica', 'memorial', 'arquivo'];
+
+  /* ---- Navegação entre páginas ---- */
+  function showPage(name) {
+    pages.forEach(function(p) {
+      document.getElementById('page-' + p).classList.remove('active');
+      var nl = document.getElementById('nl-' + p);
+      var dm = document.getElementById('dm-' + p);
+      if (nl) nl.classList.remove('active');
+      if (dm) dm.classList.remove('active');
+    });
+    document.getElementById('page-' + name).classList.add('active');
+    var nl = document.getElementById('nl-' + name);
+    var dm = document.getElementById('dm-' + name);
+    if (nl) nl.classList.add('active');
+    if (dm) dm.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ---- Menu mobile ---- */
+  function toggleMenu() {
+    var btn = document.getElementById('hamburger');
+    var drawer = document.getElementById('nav-drawer');
+    var isOpen = drawer.classList.contains('open');
+    btn.classList.toggle('open', !isOpen);
+    drawer.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('nav-drawer').classList.remove('open');
+    document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+  }
+
+  /* ---- Toggle de língua ---- */
+  var translations = {
+    poem: {
+      pt: 'A vida é uma ferida?<br>O coração lateja?<br>O sangue é uma parede cega?<br>E se tudo, de repente?',
+      en: 'Is life a wound?<br>Does the heart throb and pound?<br>Is blood a blind wall?<br>What if suddenly – all?'
+    },
+    bioShort: {
+      pt: 'Poeta, escritor e ensaísta português. Nasceu em Lourenço Marques, actual Maputo, a 9 de Agosto de 1949; morreu a 25 de Julho de 2023.',
+      en: 'Portuguese poet, fiction writer and essayist. He was born in Lourenço Marques, present-day Maputo, on August 9, 1949; deceased on July 25, 2023.'
+    },
+    memorialDates: {
+      pt: '9 de Agosto de 1949 &nbsp;·&nbsp; 25 de Julho de 2023',
+      en: 'August 9, 1949 &nbsp;·&nbsp; July 25, 2023'
+    },
+    footer: {
+      pt: 'Eduardo Pitta &nbsp;©&nbsp; 1967 – 2023',
+      en: 'Eduardo Pitta &nbsp;©&nbsp; 1967 – 2023'
+    }
+  };
+
+  function toggleLang() {
+    currentLang = currentLang === 'pt' ? 'en' : 'pt';
+    var isPt = currentLang === 'pt';
+
+    /* Botão */
+    var label = isPt ? 'PT · EN' : 'EN · PT';
+    document.getElementById('lang-btn').textContent = label;
+    var mob = document.getElementById('lang-btn-mobile');
+    if (mob) mob.textContent = label;
+
+    /* Poema + crédito tradutora */
+    document.getElementById('hero-poem').innerHTML = translations.poem[currentLang];
+    document.getElementById('hero-translator').style.display = isPt ? 'none' : 'block';
+
+    /* Bio curta */
+    document.getElementById('hero-bio-short').textContent = translations.bioShort[currentLang];
+
+    /* Bio longa */
+    document.getElementById('bio-pt').style.display = isPt ? 'block' : 'none';
+    document.getElementById('bio-en').style.display = isPt ? 'none' : 'block';
+
+    /* Datas memorial */
+    document.getElementById('memorial-dates').innerHTML = translations.memorialDates[currentLang];
+
+    /* Rodapé */
+    document.getElementById('footer-text').innerHTML = translations.footer[currentLang];
+
+    /* Labels da navegação */
+    document.querySelectorAll('[data-pt]').forEach(function(el) {
+      el.textContent = el.getAttribute('data-' + currentLang);
+    });
+
+    /* lang= do documento */
+    document.documentElement.setAttribute('lang', currentLang);
+  }
+
+  /* ---- Tabs do Arquivo ---- */
+  var archiveTabs = ['entrevistas', 'imprensa', 'publicacoes'];
+  function showTab(name) {
+    archiveTabs.forEach(function(t) {
+      var tab = document.getElementById('tab-' + t);
+      var panel = document.getElementById('panel-' + t);
+      var isActive = t === name;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', String(isActive));
+      panel.classList.toggle('active', isActive);
+    });
+  }
+</script>
+
+</body>
+</html>

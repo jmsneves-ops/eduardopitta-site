@@ -1,0 +1,442 @@
+/* ============================================================
+   Eduardo Pitta — Site Memorial
+   Tipografia: Playfair Display + EB Garamond
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #FAF8F3;
+  --text:      #1C1916;
+  --muted:     #6B6459;
+  --light:     #9A8F82;
+  --accent:    #7B1818;
+  --border:    #DDD8CC;
+  --serif:     'Playfair Display', Georgia, serif;
+  --body:      'EB Garamond', Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+em { font-style: italic; }
+strong { font-weight: 500; }
+
+/* ---- Navigation ---- */
+.site-nav {
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-logo {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--body);
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: .2rem;
+  border-bottom: 1px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.lang-toggle {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  color: var(--muted);
+  cursor: pointer;
+  border: 1px solid var(--border);
+  padding: .28rem .7rem;
+  background: none;
+  font-family: var(--body);
+  transition: background .2s;
+}
+.lang-toggle:hover { background: #F0EBE0; }
+
+/* Hamburger (mobile only) */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .3rem;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform .2s, opacity .2s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav drawer */
+.nav-drawer {
+  display: none;
+  flex-direction: column;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 2rem;
+  gap: 1rem;
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer a {
+  font-size: .85rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+.nav-drawer a.active, .nav-drawer a:hover { color: var(--accent); }
+.nav-drawer .lang-toggle { align-self: flex-start; margin-top: .5rem; }
+
+/* ---- Pages ---- */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ---- ENTRADA ---- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+  min-height: 460px;
+}
+
+.hero-text {
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.3rem;
+}
+
+.hero-poem {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.hero-translator {
+  font-size: .75rem;
+  color: var(--light);
+  letter-spacing: .02em;
+  margin-top: -.5rem;
+  display: none;
+}
+
+.hero-signature {
+  height: 60px;
+  object-fit: contain;
+  object-position: left;
+  mix-blend-mode: multiply;
+}
+
+.hero-bio-short {
+  font-size: .86rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.hero-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #C8C0B0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 500;
+  font-family: var(--body);
+  text-decoration: none;
+  transition: border-color .2s, color .2s;
+}
+.hero-icon:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+.hero-photo {
+  overflow: hidden;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.bio-full {
+  padding: 3rem;
+  max-width: 820px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+  font-size: .97rem;
+}
+.bio-full p { margin-bottom: 1.1rem; }
+.bio-full p:last-child { margin-bottom: 0; }
+
+/* ---- OBRA ---- */
+.section {
+  padding: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-label {
+  font-family: var(--serif);
+  font-size: .85rem;
+  font-weight: 400;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2.5rem 0 .8rem;
+}
+
+.book-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+.book-list li {
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: .97rem;
+  gap: 1rem;
+}
+.book-year {
+  font-size: .8rem;
+  color: var(--light);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- CRÍTICA ---- */
+.critica-list { max-width: 800px; margin: 0 auto; padding: 3rem; }
+.critica-item { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+.critica-pub {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+}
+.critica-period {
+  font-size: .8rem;
+  color: var(--accent);
+  margin-bottom: .3rem;
+  letter-spacing: .04em;
+}
+.critica-desc { font-size: .92rem; color: var(--muted); }
+
+/* ---- MEMORIAL ---- */
+.memorial-header {
+  text-align: center;
+  padding: 4rem 2rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.memorial-header h1 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: .6rem;
+}
+.memorial-dates {
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--light);
+}
+
+.memorial-body {
+  padding: 3rem;
+  max-width: 740px;
+  margin: 0 auto;
+}
+.memorial-block {
+  border: 1px dashed var(--border);
+  padding: 2rem;
+  text-align: center;
+  color: var(--light);
+  font-style: italic;
+  margin: 1.5rem 0;
+  font-size: .92rem;
+  line-height: 1.9;
+}
+.memorial-block small { font-size: .82rem; display: block; margin-top: .4rem; color: #B0A898; }
+
+/* ---- ARQUIVO ---- */
+.arquivo-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 3rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.arquivo-tab {
+  padding: 1rem 1.4rem;
+  font-size: .76rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  font-family: var(--body);
+  white-space: nowrap;
+  transition: color .2s;
+}
+.arquivo-tab:hover { color: var(--text); }
+.arquivo-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.arquivo-panel { display: none; padding: 2.5rem 3rem; max-width: 820px; }
+.arquivo-panel.active { display: block; }
+
+.arquivo-item { padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+.arquivo-item-title {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  margin-bottom: .3rem;
+}
+.arquivo-item-meta { font-size: .83rem; color: var(--light); }
+
+.arquivo-placeholder {
+  border: 1px dashed var(--border);
+  padding: 1.8rem;
+  text-align: center;
+  color: var(--light);
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-size: .9rem;
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: .75rem;
+  letter-spacing: .13em;
+  color: var(--light);
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+/* ============================================================
+   RESPONSIVO — Tablet (≤ 900px)
+   ============================================================ */
+@media (max-width: 900px) {
+  .site-nav { padding: 1rem 1.5rem; }
+  .bio-full, .section, .critica-list, .memorial-body, .arquivo-panel { padding: 2rem 1.5rem; }
+  .arquivo-tabs { padding: 0 1.5rem; }
+  .hero-text { padding: 2.5rem 2rem; }
+  .site-footer { padding: 1.5rem; }
+}
+
+/* ============================================================
+   RESPONSIVO — Mobile (≤ 640px)
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* Nav */
+  .site-nav { padding: 1rem 1.2rem; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* Hero: empilhar verticalmente, foto primeiro */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px auto;
+    min-height: unset;
+  }
+  .hero-photo { grid-row: 1; height: 280px; }
+  .hero-text {
+    grid-row: 2;
+    padding: 2rem 1.2rem;
+    gap: 1rem;
+  }
+  .hero-poem { font-size: 1.1rem; }
+  .hero-bio-short { max-width: 100%; }
+
+  /* Geral */
+  .bio-full, .section, .critica-list, .memorial-body { padding: 1.5rem 1.2rem; }
+  .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+  .memorial-header { padding: 2.5rem 1.2rem 1.5rem; }
+  .memorial-header h1 { font-size: 1.8rem; }
+
+  .arquivo-tabs { padding: 0 1.2rem; }
+  .arquivo-tab { padding: .8rem .9rem; font-size: .72rem; }
+  .arquivo-panel { padding: 1.5rem 1.2rem; }
+
+  .book-list li { font-size: .92rem; }
+
+  .site-footer { padding: 1.2rem; letter-spacing: .08em; }
+}
