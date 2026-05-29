@@ -465,3 +465,11 @@ body {
   display: block;
   filter: none;
 }
+
+/* ---- Margem lateral mais visível ---- */
+body {
+  background: #D6CFC3;
+}
+.site-wrapper {
+  max-width: 1080px;
+}
