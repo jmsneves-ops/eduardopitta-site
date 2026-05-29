@@ -10,9 +10,9 @@
 
 :root {
   --bg:        #FAF8F3;
-  --text:      #0D0B09;
-  --muted:     #3D3630;
-  --light:     #6B6055;
+  --text:      #000000;
+  --muted:     #333333;
+  --light:     #666666;
   --accent:    #7B1818;
   --border:    #DDD8CC;
   --serif:     'Playfair Display', Georgia, serif;
@@ -67,32 +67,33 @@ strong { font-weight: 500; }
 }
 
 .nav-links a {
-  font-family: var(--body);
-  font-size: .78rem;
-  letter-spacing: .1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #1a3a6b;
   text-decoration: none;
   padding-bottom: .2rem;
   border-bottom: 1px solid transparent;
-  transition: color .2s, border-color .2s;
+  transition: color .2s, border-color .2s, font-weight .1s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: #1a3a6b;
+  border-bottom-color: #1a3a6b;
+  font-weight: bold;
 }
 
 .lang-toggle {
   font-size: .72rem;
-  letter-spacing: .1em;
-  color: var(--muted);
+  letter-spacing: .06em;
+  color: #1a3a6b;
   cursor: pointer;
-  border: 1px solid var(--border);
+  border: 1px solid #1a3a6b;
   padding: .28rem .7rem;
   background: none;
-  font-family: var(--body);
+  font-family: Arial, Helvetica, sans-serif;
   transition: background .2s;
 }
 .lang-toggle:hover { background: #F0EBE0; }
@@ -129,13 +130,14 @@ strong { font-weight: 500; }
 }
 .nav-drawer.open { display: flex; }
 .nav-drawer a {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: .85rem;
-  letter-spacing: .1em;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #1a3a6b;
   text-decoration: none;
 }
-.nav-drawer a.active, .nav-drawer a:hover { color: var(--accent); }
+.nav-drawer a.active, .nav-drawer a:hover { color: #1a3a6b; font-weight: bold; }
 .nav-drawer .lang-toggle { align-self: flex-start; margin-top: .5rem; }
 
 /* ---- Pages ---- */
@@ -520,8 +522,9 @@ body {
   display: grid;
   grid-template-columns: 90px minmax(0, 1fr);
   gap: 1.5rem;
-  padding: 1.8rem 0;
+  padding: 1.8rem 3rem;
   border-bottom: 1px solid var(--border);
+  margin: 0 -3rem;
   align-items: start;
 }
 .arquivo-entry-capa {
@@ -577,8 +580,10 @@ body {
 @media (max-width: 640px) {
   .arquivo-entry {
     grid-template-columns: 1fr;
+    padding: 1.5rem 1.2rem;
+    margin: 0 -1.2rem;
   }
   .arquivo-entry-capa img {
-    width: 120px;
+    width: 90px;
   }
 }
