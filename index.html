@@ -289,7 +289,7 @@
   var pages = ['entrada', 'obra', 'critica', 'memorial', 'arquivo'];
 
   /* ---- Navegação entre páginas ---- */
-  function showPage(name) {
+  function showPage(name, updateHash) {
     pages.forEach(function(p) {
       document.getElementById('page-' + p).classList.remove('active');
       var nl = document.getElementById('nl-' + p);
@@ -302,8 +302,26 @@
     var dm = document.getElementById('dm-' + name);
     if (nl) nl.classList.add('active');
     if (dm) dm.classList.add('active');
+    if (updateHash !== false) {
+      window.location.hash = name === 'entrada' ? '' : name;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  /* ---- Carregar página correcta ao iniciar (F5 / link directo) ---- */
+  (function() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && pages.indexOf(hash) !== -1) {
+      showPage(hash, false);
+    }
+  })();
+
+  /* ---- Navegação do browser (botões Voltar / Avançar) ---- */
+  window.addEventListener('hashchange', function() {
+    var hash = window.location.hash.replace('#', '');
+    var page = (hash && pages.indexOf(hash) !== -1) ? hash : 'entrada';
+    showPage(page, false);
+  });
 
   /* ---- Menu mobile ---- */
   function toggleMenu() {
