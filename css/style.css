@@ -440,3 +440,28 @@ strong { font-weight: 500; }
 
   .site-footer { padding: 1.2rem; letter-spacing: .08em; }
 }
+
+/* ============================================================
+   CONTENTOR CENTRAL — limita largura em ecrãs grandes
+   ============================================================ */
+.site-wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Fundo do body ligeiramente diferente para criar profundidade */
+body {
+  background: #F0EBE0;
+}
+
+/* ---- Logótipo na navegação ---- */
+.site-logo img {
+  height: 26px;
+  width: auto;
+  display: block;
+  filter: none;
+}
