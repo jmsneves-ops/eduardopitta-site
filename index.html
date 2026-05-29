@@ -14,6 +14,48 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- ====================================================
+     ECRÃ DE ACESSO (fase de desenvolvimento)
+     ==================================================== -->
+<div id="access-screen" style="
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:#FAF8F3;z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'EB Garamond',Georgia,serif;
+">
+  <div style="text-align:center;max-width:340px;padding:2rem">
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#0D0B09;margin-bottom:2rem">Eduardo Pitta</div>
+    <div style="font-size:.85rem;color:#666;margin-bottom:1.5rem;letter-spacing:.04em">Site em desenvolvimento</div>
+    <input
+      type="password"
+      id="access-input"
+      placeholder="Palavra-passe"
+      onkeydown="if(event.key==='Enter')checkAccess()"
+      style="
+        width:100%;padding:.7rem 1rem;
+        font-family:'EB Garamond',Georgia,serif;font-size:1rem;
+        border:1px solid #DDD8CC;background:#fff;
+        outline:none;text-align:center;
+        margin-bottom:.8rem;
+      "
+    >
+    <div id="access-error" style="font-size:.8rem;color:#7B1818;margin-bottom:.8rem;min-height:1.2rem"></div>
+    <button
+      onclick="checkAccess()"
+      style="
+        font-family:'EB Garamond',Georgia,serif;font-size:.85rem;
+        letter-spacing:.1em;text-transform:uppercase;
+        border:1px solid #0D0B09;background:none;color:#0D0B09;
+        padding:.6rem 2rem;cursor:pointer;
+        transition:background .2s,color .2s;
+      "
+      onmouseover="this.style.background='#0D0B09';this.style.color='#FAF8F3'"
+      onmouseout="this.style.background='none';this.style.color='#0D0B09'"
+    >Entrar</button>
+  </div>
+</div>
+
 <div class="site-wrapper">
 
 <!-- ====================================================
@@ -409,5 +451,35 @@
 </script>
 
 </div><!-- /.site-wrapper -->
+<script>
+  (function() {
+    var hash = '21398d6e87fcf5417b12fb85c3ccc7f2072ee0cb7bcfb214225c67e276af4f5a';
+    if (sessionStorage.getItem('ep_access') === hash) {
+      document.getElementById('access-screen').style.display = 'none';
+    }
+  })();
+
+  function checkAccess() {
+    var input = document.getElementById('access-input').value;
+    var hash = '21398d6e87fcf5417b12fb85c3ccc7f2072ee0cb7bcfb214225c67e276af4f5a';
+    sha256(input).then(function(h) {
+      if (h === hash) {
+        sessionStorage.setItem('ep_access', hash);
+        document.getElementById('access-screen').style.display = 'none';
+      } else {
+        document.getElementById('access-error').textContent = 'Palavra-passe incorrecta.';
+        document.getElementById('access-input').value = '';
+        document.getElementById('access-input').focus();
+      }
+    });
+  }
+
+  async function sha256(message) {
+    var msgBuffer = new TextEncoder().encode(message);
+    var hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    var hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+  }
+</script>
 </body>
 </html>
