@@ -514,3 +514,70 @@ body {
 }
 
 
+
+/* ---- Entradas do Arquivo ---- */
+.arquivo-entry {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.8rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.arquivo-entry-capa {
+  flex-shrink: 0;
+}
+.arquivo-entry-capa img {
+  width: 140px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+}
+.arquivo-entry-meta {
+  font-size: .75rem;
+  letter-spacing: .06em;
+  color: var(--light);
+  margin-bottom: .4rem;
+  font-family: var(--body);
+}
+.arquivo-entry-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: .7rem;
+  color: var(--text);
+}
+.arquivo-entry-text {
+  font-size: .9rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: .9rem;
+}
+.arquivo-entry-link {
+  font-size: .78rem;
+  letter-spacing: .06em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+.arquivo-entry-link:hover {
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+.arquivo-placeholder small {
+  display: block;
+  margin-top: .3rem;
+  font-size: .8rem;
+  color: #B0A898;
+}
+
+/* Mobile — entrada do arquivo em coluna */
+@media (max-width: 640px) {
+  .arquivo-entry {
+    grid-template-columns: 1fr;
+  }
+  .arquivo-entry-capa img {
+    width: 120px;
+  }
+}
