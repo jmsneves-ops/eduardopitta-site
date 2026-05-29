@@ -473,3 +473,12 @@ body {
 .site-wrapper {
   max-width: 1080px;
 }
+
+/* ---- Ajuste de margens — contentor mais estreito ---- */
+body {
+  background: #C8BFB0;
+}
+.site-wrapper {
+  max-width: 960px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+}
