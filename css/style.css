@@ -338,13 +338,12 @@ strong { font-weight: 500; }
   display: flex;
   border-bottom: 1px solid var(--border);
   padding: 0 3rem;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 .arquivo-tab {
-  padding: 1rem 1.4rem;
-  font-size: .76rem;
-  letter-spacing: .09em;
+  padding: .85rem 1rem;
+  font-size: .68rem;
+  letter-spacing: .07em;
   text-transform: uppercase;
   color: var(--muted);
   cursor: pointer;
@@ -352,7 +351,7 @@ strong { font-weight: 500; }
   background: none;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
-  font-family: var(--body);
+  font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   transition: color .2s;
 }
