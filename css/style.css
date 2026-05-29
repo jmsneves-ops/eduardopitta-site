@@ -162,7 +162,7 @@ strong { font-weight: 500; }
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.25rem;
-  line-height: 1.85;
+  line-height: 1.55;
   color: var(--text);
 }
 
@@ -513,15 +513,4 @@ body {
   font-family: var(--body);
 }
 
-/* Poema — garantir que versos não quebram em largura total */
-.hero-poem {
-  white-space: pre-line;
-}
 
-/* ---- Poema mobile — espaçamento entre versos mais compacto ---- */
-@media (max-width: 640px) {
-  .hero-poem {
-    line-height: 1.6;
-    font-size: 1.15rem;
-  }
-}
