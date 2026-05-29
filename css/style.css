@@ -517,3 +517,11 @@ body {
 .hero-poem {
   white-space: pre-line;
 }
+
+/* ---- Poema mobile — espaçamento entre versos mais compacto ---- */
+@media (max-width: 640px) {
+  .hero-poem {
+    line-height: 1.6;
+    font-size: 1.15rem;
+  }
+}
