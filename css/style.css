@@ -411,19 +411,21 @@ strong { font-weight: 500; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
 
-  /* Hero: empilhar verticalmente, foto primeiro */
+  /* Hero: poema em cima, foto em baixo */
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: 280px auto;
+    grid-template-rows: auto 320px;
     min-height: unset;
   }
-  .hero-photo { grid-row: 1; height: 280px; }
   .hero-text {
-    grid-row: 2;
-    padding: 2rem 1.2rem;
+    grid-row: 1;
+    padding: 2rem 1.4rem;
     gap: 1rem;
   }
-  .hero-poem { font-size: 1.1rem; }
+  .hero-photo {
+    grid-row: 2;
+    height: 320px;
+  }
   .hero-bio-short { max-width: 100%; }
 
   /* Geral */
@@ -481,4 +483,37 @@ body {
 .site-wrapper {
   max-width: 960px;
   box-shadow: 0 0 40px rgba(0,0,0,0.08);
+}
+
+/* ============================================================
+   REFINAMENTOS — Proposta B (Editorial)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --serif: 'Playfair Display', 'Libre Baskerville', Georgia, serif;
+  --body:  'EB Garamond', 'Libre Baskerville', Georgia, serif;
+}
+
+/* Linha dupla no topo da navegação */
+.site-nav {
+  border-top: 3px solid var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Etiqueta "Poeta · Escritor · Ensaísta" abaixo do hero */
+.hero-tagline {
+  display: block;
+  font-size: .72rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--light);
+  padding: .9rem 3rem;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--body);
+}
+
+/* Poema — garantir que versos não quebram em largura total */
+.hero-poem {
+  white-space: pre-line;
 }
