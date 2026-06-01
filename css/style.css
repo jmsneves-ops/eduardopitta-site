@@ -620,8 +620,8 @@ body {
   font-family: sans-serif;
   vertical-align: middle;
 }
-.rc-entries { display: none; }
-.rc-entries.open { display: block; }
+.rc-entries { display: none; overflow: visible; }
+.rc-entries.open { display: block; overflow: visible; }
 .rc-entry { padding: .9rem 0; border-bottom: 0.5px solid var(--border); }
 .rc-entry:last-child { border-bottom: none; }
 .rc-entry-meta {
