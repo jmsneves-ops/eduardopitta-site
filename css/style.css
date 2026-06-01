@@ -620,9 +620,9 @@ body {
   font-family: sans-serif;
   vertical-align: middle;
 }
-.rc-entries { display: none; overflow: visible; }
-.rc-entries.open { display: block; overflow: visible; }
-.rc-entry { padding: .9rem 0; border-bottom: 0.5px solid var(--border); }
+.rc-entries { display: none; }
+.rc-entries.open { display: block; height: auto; overflow: visible; }
+.rc-entry { padding: .9rem 0; border-bottom: 0.5px solid var(--border); overflow: visible; height: auto; }
 .rc-entry:last-child { border-bottom: none; }
 .rc-entry-meta {
   font-size: .88rem;
