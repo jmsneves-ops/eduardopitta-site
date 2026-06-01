@@ -594,7 +594,7 @@ body {
 .rc-obra:last-child { border-bottom: none; }
 .rc-obra-title {
   font-family: var(--serif);
-  font-size: .97rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: var(--text);
   cursor: pointer;
@@ -625,7 +625,7 @@ body {
 .rc-entry { padding: .9rem 0; border-bottom: 0.5px solid var(--border); }
 .rc-entry:last-child { border-bottom: none; }
 .rc-entry-meta {
-  font-size: .75rem;
+  font-size: .88rem;
   color: var(--light);
   margin-bottom: .4rem;
   display: flex;
@@ -633,7 +633,7 @@ body {
   flex-wrap: wrap;
   align-items: baseline;
 }
-.rc-entry-meta .critic { font-weight: 500; color: var(--text); font-size: .8rem; }
+.rc-entry-meta .critic { font-weight: 500; color: var(--text); font-size: .92rem; }
 .rc-entry-meta .sep { color: var(--border); }
 .rc-entry-text {
   font-size: .93rem;
