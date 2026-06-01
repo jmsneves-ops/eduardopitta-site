@@ -588,3 +588,68 @@ body {
     width: 90px;
   }
 }
+
+/* ---- Recepção Crítica ---- */
+.rc-obra { border-bottom: 0.5px solid var(--border); }
+.rc-obra:last-child { border-bottom: none; }
+.rc-obra-title {
+  font-family: var(--serif);
+  font-size: .97rem;
+  font-weight: 400;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .9rem 0;
+  border-bottom: 0.5px solid var(--border);
+  user-select: none;
+}
+.rc-obra-title:hover { color: var(--accent); }
+.rc-obra-title .year { font-size: .75rem; color: var(--light); font-family: var(--body); flex-shrink: 0; }
+.rc-obra-title .toggle { font-size: .72rem; color: var(--light); flex-shrink: 0; }
+.rc-count {
+  display: inline-block;
+  font-size: .65rem;
+  color: var(--light);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: .05rem .45rem;
+  margin-left: .4rem;
+  font-family: sans-serif;
+  vertical-align: middle;
+}
+.rc-entries { display: none; }
+.rc-entries.open { display: block; }
+.rc-entry { padding: .9rem 0; border-bottom: 0.5px solid var(--border); }
+.rc-entry:last-child { border-bottom: none; }
+.rc-entry-meta {
+  font-size: .75rem;
+  color: var(--light);
+  margin-bottom: .4rem;
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.rc-entry-meta .critic { font-weight: 500; color: var(--text); font-size: .8rem; }
+.rc-entry-meta .sep { color: var(--border); }
+.rc-entry-text {
+  font-size: .93rem;
+  line-height: 1.8;
+  color: var(--text);
+  font-style: italic;
+  border-left: 2px solid var(--border);
+  padding-left: .9rem;
+}
+@media (max-width: 640px) {
+  .rc-obra-title { font-size: .9rem; }
+}
+
+/* Títulos de obras dentro dos excertos — negrito e vermelho */
+.rc-entry-text em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+}
