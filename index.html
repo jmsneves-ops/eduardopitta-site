@@ -63,9 +63,15 @@
      NAVEGAÇÃO
      ==================================================== -->
 <nav class="site-nav" role="navigation" aria-label="Navegação principal">
-  <a class="site-logo" href="#" onclick="showPage('entrada'); return false;"><img src="images/logo.png" alt="Eduardo Pitta" style="height:28px;vertical-align:middle;"></a>
-
-  <!-- Desktop -->
+  <div class="nav-top">
+    <a class="site-logo" href="#" onclick="showPage('entrada'); return false;"><img src="images/logo.png" alt="Eduardo Pitta" style="height:28px;vertical-align:middle;"></a>
+    <button class="lang-toggle" onclick="toggleLang()" id="lang-btn" aria-label="Mudar língua">PT · EN</button>
+    <!-- Mobile hamburger -->
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Desktop menu bar -->
   <ul class="nav-links" id="nav-desktop">
     <li><a href="#" onclick="showPage('entrada'); return false;" id="nl-entrada" class="active" data-pt="Entrada" data-en="Home">Entrada</a></li>
     <li><a href="#" onclick="showPage('obra'); return false;" id="nl-obra" data-pt="Obra" data-en="Works">Obra</a></li>
@@ -73,13 +79,7 @@
     <li><a href="#" onclick="showPage('memorial'); return false;" id="nl-memorial" data-pt="Memorial" data-en="Memorial">Memorial</a></li>
     <li><a href="#" onclick="showPage('arquivo'); return false;" id="nl-arquivo" data-pt="Arquivo" data-en="Archive">Arquivo</a></li>
     <li><a href="#" onclick="showPage('recepcao'); return false;" id="nl-recepcao" data-pt="Recepção Crítica" data-en="Critical Reception">Recepção Crítica</a></li>
-    <li><button class="lang-toggle" onclick="toggleLang()" id="lang-btn" aria-label="Mudar língua">PT · EN</button></li>
   </ul>
-
-  <!-- Mobile hamburger -->
-  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <!-- Mobile drawer -->
