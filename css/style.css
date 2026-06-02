@@ -662,3 +662,42 @@ body {
   font-weight: 500;
   color: var(--accent);
 }
+
+/* ---- Recepção Crítica (integrada no index.html) ---- */
+#page-recepcao .subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+#page-recepcao .entry {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #EEE9DF;
+}
+#page-recepcao .entry:last-child { border-bottom: none; }
+#page-recepcao .header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .7rem;
+}
+#page-recepcao .header em {
+  font-style: italic;
+  color: var(--accent);
+}
+#page-recepcao .body p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+  border-left: 2px solid var(--border);
+  padding-left: 1.1rem;
+  margin-bottom: .8rem;
+}
+#page-recepcao .body p:last-child { margin-bottom: 0; }
+#page-recepcao .body em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+}
