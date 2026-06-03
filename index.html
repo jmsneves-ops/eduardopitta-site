@@ -404,12 +404,12 @@
   }
 
   /* ---- Carregar página correcta ao iniciar (F5 / link directo) ---- */
-  (function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var hash = window.location.hash.replace('#', '');
     if (hash && pages.indexOf(hash) !== -1) {
       showPage(hash, false);
     }
-  })();
+  });
 
   /* ---- Navegação do browser (botões Voltar / Avançar) ---- */
   window.addEventListener('hashchange', function() {
