@@ -701,3 +701,55 @@ body {
   color: var(--accent);
   font-weight: 500;
 }
+
+/* ---- Book cards (Obra page) ---- */
+.book-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.book-cover {
+  width: 160px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.book-cover:hover {
+  opacity: .85;
+}
+.book-info {
+  flex: 1;
+}
+.book-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: .4rem;
+}
+.book-title em {
+  font-style: italic;
+}
+.book-title .book-year {
+  font-family: var(--body);
+  font-size: .82rem;
+  color: var(--light);
+  font-weight: 400;
+  margin-left: .5rem;
+}
+.book-sinopse {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+@media (max-width: 640px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .book-cover { width: 140px; }
+  .book-sinopse { text-align: left; }
+}
