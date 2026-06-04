@@ -255,9 +255,19 @@
 
     <h2 class="category-label" id="cat-ficcao">Ficção</h2>
     <ul class="book-list">
-      <li><span><em>Persona</em></span><span class="book-year">2000 · 3.ª ed. 2019</span></li>
-      <li><span><em>Devastação</em></span><span class="book-year">2021</span></li>
     </ul>
+
+    <div class="book-card">
+      <div class="book-covers-multi">
+        <div class="cover-edition"><img class="book-cover-small" src="images/capa-persona-1ed.png" alt="Persona 1.ª edição" onclick="openLightbox(this.src)"><div class="cover-caption"><span class="cover-publisher">Angelus Novus</span><span class="cover-year">Coimbra, 2000</span></div></div>
+        <div class="cover-edition"><img class="book-cover-small" src="images/capa-persona-2ed.png" alt="Persona 2.ª edição" onclick="openLightbox(this.src)"><div class="cover-caption"><span class="cover-publisher">QuidNovi</span><span class="cover-year">2007 · 2.ª ed.</span></div></div>
+        <div class="cover-edition"><img class="book-cover-small" src="images/capa-persona-3ed.png" alt="Persona 3.ª edição" onclick="openLightbox(this.src)"><div class="cover-caption"><span class="cover-publisher">Dom Quixote</span><span class="cover-year">2019 · 3.ª ed.</span></div></div>
+      </div>
+      <div class="book-info">
+        <h3 class="book-title"><em>Persona</em> <span class="book-year">2000 · 3.ª ed. Dom Quixote, 2019</span></h3>
+        <p class="book-sinopse">Persona é uma trilogia de ficções morais em torno de Afonso, personagem que atravessa três momentos decisivos: a adolescência em Lourenço Marques, a descoberta do desejo na África do Sul do apartheid e a experiência adulta num Moçambique já perto do fim colonial. As três narrativas — "Marilyn", "Kalahari" e "Pesadelo" — acompanham uma aprendizagem íntima que é também social e política: o corpo, o desejo, a vergonha, a violência institucional e a impostura moral cruzam-se num mundo onde a escola, a família, a medicina, o exército e o império procuram vigiar, corrigir e classificar. Em "Marilyn", Afonso é confrontado, ainda adolescente, com a vigilância moral da escola e com a tentativa de normalização da masculinidade. Em "Kalahari", o espaço desloca-se para a África do Sul: a viagem, o deserto e o encontro com Ralph abrem uma zona de liberdade relativa, mas essa liberdade existe dentro de um mundo ferozmente dividido pelo apartheid. Em "Pesadelo", o livro entra no espaço da guerra e do exército: a guerra colonial, a masculinidade militar, os abusos de poder e a sexualidade clandestina compõem o lado nocturno do império. A força de Persona está nessa dupla leitura: é uma narrativa de iniciação homoerótica, mas também uma anatomia do colonialismo português nos seus últimos anos. O desejo não aparece como ornamento escandaloso — aparece como revelador, mostrando o que as instituições escondem: a hipocrisia da moral dominante, a fragilidade da virilidade oficial, o medo da diferença e o colapso de uma ordem social que se julgava eterna.</p>
+      </div>
+    </div>
 
     <div class="book-card">
       <div class="book-covers-multi">
@@ -271,7 +281,16 @@
       </div>
     </div>
 
-    <h2 class="category-label" id="cat-ensaio">Ensaio &amp; Crítica</h2>
+    
+    <div class="book-card">
+      <div class="cover-wrap"><img class="book-cover" src="images/capa-devastacao.png" alt="Capa de Devastação" onclick="openLightbox(this.src)"><div class="cover-caption"><span class="cover-publisher">Dom Quixote · Grupo Leya</span><span class="cover-year">Lisboa, 2021</span></div></div>
+      <div class="book-info">
+        <h3 class="book-title"><em>Devastação</em> <span class="book-year">2021</span></h3>
+        <p class="book-sinopse">Devastação reúne seis contos — "Ema", "João Pedro", "Ofélia", "Gilberta", "Inês" e "Zé Maria" — atravessados por uma mesma matéria sombria: vidas feridas por humilhações antigas, violências familiares, preconceito, colonialismo, desejo reprimido, culpa, doença, isolamento e colapso íntimo. Em "Ema", uma mulher vive durante cinquenta anos prisioneira de uma humilhação pública sofrida na adolescência, num baile de finalistas que lhe destrói a vida social, familiar e afectiva. Em "João Pedro", a infância aparece como território de cálculo, medo e sobrevivência. "Ofélia" mergulha numa genealogia familiar onde aristocracia decadente, memória política, desejo, segredo e violência se cruzam. Em "Gilberta", a morte do marido desencadeia uma revisitação amarga da vida: Moçambique, o 7 de Setembro de 1974, a fuga, Johannesburg, o regresso a Portugal e a ruptura com o filho por causa da sua homossexualidade. "Inês" desloca a devastação para uma burguesia cosmopolita atravessada por dinheiro, drogas, adultério e falência moral. O último conto, "Zé Maria", aproxima a devastação da pandemia: um professor universitário descobre um aneurisma cerebral enquanto a mulher fica retida em Chicago no início da crise da covid-19. No conjunto, Devastação é um livro sobre aquilo que fica depois do acontecimento traumático: a vergonha, o ressentimento, a violência herdada, o segredo familiar, o preconceito, o desejo maldito, a perda de estatuto, a doença e a morte.</p>
+      </div>
+    </div>
+
+<h2 class="category-label" id="cat-ensaio">Ensaio &amp; Crítica</h2>
     <ul class="book-list">
       <li><span><em>Comenda de Fogo</em></span><span class="book-year">2002</span></li>
       <li><span><em>Fractura</em></span><span class="book-year">2003</span></li>
@@ -673,16 +692,5 @@
 
   </div>
 </main>
+</main>
 
-</div><!-- /.site-wrapper -->
-
-
-
-<!-- Lightbox para capas -->
-<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:10000;cursor:pointer;align-items:center;justify-content:center;">
-  <img id="lightbox-img" src="" alt="Capa em tamanho original" style="max-width:90%;max-height:90%;border:2px solid #fff;box-shadow:0 0 40px rgba(0,0,0,0.5);">
-  <span style="position:absolute;top:1.5rem;right:2rem;color:#fff;font-size:2rem;font-family:Arial,sans-serif;cursor:pointer;">&times;</span>
-</div>
-
-</body>
-</html>
