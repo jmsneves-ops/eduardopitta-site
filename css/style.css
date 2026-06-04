@@ -760,7 +760,7 @@ body {
   flex-direction: column;
   gap: .6rem;
   flex-shrink: 0;
-  width: 100px;
+  width: 160px;
 }
 .cover-edition {
   display: flex;
@@ -769,7 +769,7 @@ body {
   gap: .25rem;
 }
 .book-cover-small {
-  width: 100px;
+  width: 160px;
   border: 1px solid var(--border);
   cursor: pointer;
   transition: opacity .2s;
