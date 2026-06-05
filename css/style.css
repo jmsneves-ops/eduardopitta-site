@@ -309,13 +309,6 @@ strong { font-weight: 500; }
 .critica-desc { font-size: .92rem; color: var(--muted); }
 
 /* ---- MEMORIAL ---- */
-.memorial-name {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--text);
-  margin-bottom: .5rem;
-}
 .memorial-dates {
   font-size: .78rem;
   letter-spacing: .18em;
@@ -369,7 +362,7 @@ strong { font-weight: 500; }
   font-family: var(--serif);
   font-size: 1.45rem;
   font-weight: 400;
-  margin: 0 0 .8rem;
+  margin: 0 0 1.3rem;
 }
 .memorial-standfirst {
   font-style: italic;
@@ -539,7 +532,6 @@ strong { font-weight: 500; }
   /* Geral */
   .bio-full, .section, .critica-list { padding: 1.5rem 1.2rem; }
   .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
-  .memorial-name { font-size: 1.4rem; }
 
   .arquivo-tabs { padding: 0 1.2rem; }
   .arquivo-tab { padding: .8rem .9rem; font-size: .72rem; }
