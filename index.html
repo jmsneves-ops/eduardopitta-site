@@ -75,10 +75,9 @@
   <ul class="nav-links" id="nav-desktop">
     <li><a href="#" onclick="showPage('entrada'); return false;" id="nl-entrada" class="active" data-pt="Entrada" data-en="Home">Entrada</a></li>
     <li><a href="#" onclick="showPage('obra'); return false;" id="nl-obra" data-pt="Obra" data-en="Works">Obra</a></li>
-    <li><a href="#" onclick="showPage('critica'); return false;" id="nl-critica" data-pt="Crítica" data-en="Criticism">Crítica</a></li>
+    <li><a href="#" onclick="showPage('recepcao'); return false;" id="nl-recepcao" data-pt="Recepção Crítica" data-en="Critical Reception">Recepção Crítica</a></li>
     <li><a href="#" onclick="showPage('memorial'); return false;" id="nl-memorial" data-pt="Memorial" data-en="Memorial">Memorial</a></li>
     <li><a href="#" onclick="showPage('arquivo'); return false;" id="nl-arquivo" data-pt="Arquivo" data-en="Archive">Arquivo</a></li>
-    <li><a href="#" onclick="showPage('recepcao'); return false;" id="nl-recepcao" data-pt="Recepção Crítica" data-en="Critical Reception">Recepção Crítica</a></li>
   </ul>
 </nav>
 
@@ -520,7 +519,7 @@
 <script>
   /* ---- Estado ---- */
   var currentLang = 'pt';
-  var pages = ['entrada', 'obra', 'critica', 'memorial', 'arquivo', 'recepcao'];
+  var pages = ['entrada', 'obra', 'recepcao', 'memorial', 'arquivo', 'critica'];
 
   /* ---- Navegação entre páginas ---- */
   function showPage(name, updateHash) {
