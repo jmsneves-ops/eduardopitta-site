@@ -309,28 +309,29 @@ strong { font-weight: 500; }
 .critica-desc { font-size: .92rem; color: var(--muted); }
 
 /* ---- MEMORIAL ---- */
-.memorial-header {
-  text-align: center;
-  padding: 4rem 2rem 2.5rem;
-  border-bottom: 1px solid var(--border);
-}
-.memorial-header h1 {
+.memorial-name {
   font-family: var(--serif);
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: .6rem;
+  color: var(--text);
+  margin-bottom: .5rem;
 }
 .memorial-dates {
   font-size: .78rem;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--light);
+  margin-bottom: 2rem;
 }
-
-.memorial-body {
-  padding: 3rem;
-  max-width: 740px;
-  margin: 0 auto;
+.memorial-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 680px;
+  text-align: justify;
+}
+.memorial-blocks {
+  margin-top: 3rem;
 }
 .memorial-block {
   border: 1px dashed var(--border);
@@ -343,6 +344,44 @@ strong { font-weight: 500; }
   line-height: 1.9;
 }
 .memorial-block small { font-size: .82rem; display: block; margin-top: .4rem; color: #B0A898; }
+
+/* Abertura */
+.memorial-abertura { max-width: 680px; }
+.memorial-figure { margin: 0 0 1.8rem; }
+.memorial-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--border); }
+.memorial-figure figcaption {
+  margin-top: .7rem;
+  font-style: italic;
+  font-size: .95rem;
+  color: var(--light);
+  text-align: center;
+}
+.memorial-credit {
+  display: block;
+  font-style: normal;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #B0A898;
+  margin-top: .4rem;
+}
+.memorial-piece-title {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin: 0 0 .8rem;
+}
+.memorial-standfirst {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 1.6rem;
+}
+.memorial-abertura p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0 0 1.1rem;
+}
+.memorial-abertura p:last-child { margin-bottom: 0; }
 
 /* ---- ARQUIVO ---- */
 .arquivo-tabs {
@@ -407,7 +446,7 @@ strong { font-weight: 500; }
    ============================================================ */
 @media (max-width: 900px) {
   .site-nav { padding: 1rem 1.5rem; }
-  .bio-full, .section, .critica-list, .memorial-body, .arquivo-panel { padding: 2rem 1.5rem; }
+  .bio-full, .section, .critica-list, .arquivo-panel { padding: 2rem 1.5rem; }
   .arquivo-tabs { padding: 0 1.5rem; }
   .hero-text { padding: 2.5rem 2rem; }
   .site-footer { padding: 1.5rem; }
@@ -442,10 +481,9 @@ strong { font-weight: 500; }
   .hero-bio-short { max-width: 100%; }
 
   /* Geral */
-  .bio-full, .section, .critica-list, .memorial-body { padding: 1.5rem 1.2rem; }
+  .bio-full, .section, .critica-list { padding: 1.5rem 1.2rem; }
   .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
-  .memorial-header { padding: 2.5rem 1.2rem 1.5rem; }
-  .memorial-header h1 { font-size: 1.8rem; }
+  .memorial-name { font-size: 1.4rem; }
 
   .arquivo-tabs { padding: 0 1.2rem; }
   .arquivo-tab { padding: .8rem .9rem; font-size: .72rem; }
