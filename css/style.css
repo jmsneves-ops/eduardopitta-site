@@ -396,6 +396,11 @@ strong { font-weight: 500; }
   line-height: 1.8;
   margin: 0 0 1.6rem;
 }
+.testemunho-corpo {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0 0 1.1rem;
+}
 .testemunho-citacao {
   margin: 0 0 1.4rem;
   padding: .2rem 0 .2rem 1.5rem;
@@ -1095,3 +1100,18 @@ body {
   color: var(--accent);
 }
 .footer-top:hover { text-decoration: underline; }
+
+/* Memorial — vídeo embebido (leitura do Voto de Pesar) */
+.memorial-video { margin: 0 0 1.6rem; }
+.memorial-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  display: block;
+}
+.memorial-video figcaption {
+  margin-top: .5rem;
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--light);
+}
