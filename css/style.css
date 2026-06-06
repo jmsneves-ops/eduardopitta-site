@@ -763,12 +763,88 @@ body {
   border-bottom: 1px solid #EEE9DF;
 }
 #page-recepcao .entry:last-child { border-bottom: none; }
+#rc-fab {
+  position: fixed;
+  right: max(.75rem, calc((100vw - 900px) / 2 - 8.5rem));
+  bottom: 1.5rem;
+  z-index: 90;
+  width: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+#rc-fab.show {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.rc-fab-btn {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-family: var(--body);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .5rem .9rem;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  text-align: center;
+  white-space: nowrap;
+}
+.rc-fab-btn:hover { background: #F1ECE1; }
+@media (max-width: 600px) {
+  #rc-fab { right: .75rem; bottom: 1rem; }
+}
 #page-recepcao .header {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
   margin-bottom: .7rem;
 }
+#page-recepcao .header:hover { color: var(--accent); }
+#page-recepcao .header .chev {
+  flex: 0 0 auto;
+  color: var(--light);
+  font-size: .8rem;
+  transition: transform .2s;
+}
+#page-recepcao .entry.open .header .chev { transform: rotate(180deg); }
+#page-recepcao .body {
+  position: relative;
+  max-height: 4rem;
+  overflow: hidden;
+}
+#page-recepcao .body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.8rem;
+  background: linear-gradient(to bottom, rgba(250, 248, 243, 0), var(--bg));
+  pointer-events: none;
+}
+#page-recepcao .entry.open .body { max-height: none; }
+#page-recepcao .entry.open .body::after { display: none; }
 #page-recepcao .header em {
   font-style: italic;
   color: var(--accent);
