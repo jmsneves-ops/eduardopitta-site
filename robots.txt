@@ -1,0 +1,4 @@
+# Fase de desenvolvimento — indexação desactivada
+# Substituir por robots-launch.txt na altura do lançamento
+User-agent: *
+Disallow: /
